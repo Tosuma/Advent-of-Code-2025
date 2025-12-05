@@ -1,4 +1,7 @@
-﻿using AdventOfCode;
+﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace AdventOfCode;
 
 public class Program
 {
@@ -6,7 +9,7 @@ public class Program
     {
         Action<TextReader>[] problemSolutions =
         [
-            Day01.Run, Day02.Run
+            Day01.Run, Day02.Run, Day03.Run
         ];
 
         foreach ((int fromIndex, int toIndex) in ProblemIndices(problemSolutions.Length))

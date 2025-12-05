@@ -11,4 +11,15 @@ internal static class Common
         while (reader.ReadLine() is string line)
             yield return line;
     }
+
+    public static ulong Sum(this IEnumerable<ulong> source)
+    {
+        ulong sum = 0;
+        foreach (ulong value in source)
+        {
+            sum += value;
+        }
+
+        return sum;
+    }
 }
