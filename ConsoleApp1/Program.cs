@@ -9,7 +9,7 @@ public class Program
     {
         Action<TextReader>[] problemSolutions =
         [
-            Day01.Run, Day02.Run, Day03.Run
+            Day01.Run, Day02.Run, Day03.Run, Day04.Run
         ];
 
         foreach ((int fromIndex, int toIndex) in ProblemIndices(problemSolutions.Length))
