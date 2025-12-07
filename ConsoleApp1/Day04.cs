@@ -18,8 +18,8 @@ internal static class Day04
 
         var sumPart2 = map.CountTotalRemovableRolls();
 
-        Console.WriteLine($"Rolls of paper accessible : {sumPart1} --> Is correct ? {sumPart1 == 1433}");
-        Console.WriteLine($"Rolls of paper removable  : {sumPart2} --> Is correct ? {sumPart2 == 8616}");
+        Common.Result("Rolls of paper accessible", sumPart1, 1433);
+        Common.Result("Rolls of paper removable", sumPart2, 8616);
     }
 
     private static Map ReadMap(this TextReader reader)

@@ -48,11 +48,12 @@ internal static class Day02
             .Where(v => mergedRanges.Any(r => r.Start <= v && v <= r.End))
             .Sum();
 
-        Console.WriteLine($"Sum of invalid IDs : {sumPart1} --> Is correct ? {sumPart1 == 28844599675}");
-        Console.WriteLine($"Sum of invalid IDs : {sumPart2} --> Is correct ? {sumPart2 == 48778605167}");
+        Common.Result("Sum of invalid half IDs", sumPart1, 28844599675UL);
+        Common.Result("Sum of all invalid IDs", sumPart2, 48778605167UL);
     }
 
-    private static IEnumerable<Range> ParseRanges(string input) => input
+    private static IEnumerable<Range> ParseRanges(string input)
+        => input
             .Split(',') // split ranges
             .Select(strRange => strRange.Split('-')) // split range pairs
             .Select(strs =>

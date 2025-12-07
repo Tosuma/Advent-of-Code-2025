@@ -15,8 +15,8 @@ internal static class Day03
         var sumPart1 = batteryBanks.Sum(bank => bank.SelectBatteries(2).Join());
         var sumPart2 = batteryBanks.Sum(bank => bank.SelectBatteries(12).Join());
 
-        Console.WriteLine($"Sum of joltage  (2 batteries) : {sumPart1} --> Is correct ? {sumPart1 == 17311}");
-        Console.WriteLine($"Sum of joltage (12 Batteries) : {sumPart2} --> Is correct ? {sumPart2 == 171419245422055}");
+        Common.Result("Sum of joltage  (2 batteries)", sumPart1, 17311);
+        Common.Result("Sum of joltage (12 batteries)", sumPart2, 171419245422055);
     }
 
     private static long Join(this IEnumerable<Battery> batteries) =>

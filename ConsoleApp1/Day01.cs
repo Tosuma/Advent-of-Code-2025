@@ -21,8 +21,8 @@ static class Day01
         });
 
 
-        Console.WriteLine($"The number of zero endings : {zeroEndings} --> Is correct ? {zeroEndings == 982}");
-        Console.WriteLine($"The number of zero passes  : {zeroPasses} --> Is correct ? {zeroPasses == 6106}");
+        Common.Result("The number of zero endings", zeroEndings, 982);
+        Common.Result("The number of zero endings", zeroPasses, 6106);
     }
 
     private static int ParseMove(string line) => line[0] == 'L' ? -int.Parse(line[1..]) : int.Parse(line[1..]);

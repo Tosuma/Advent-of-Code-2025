@@ -6,6 +6,8 @@ namespace AdventOfCode;
 
 internal static class Common
 {
+    public static void Result<T>(string msg, T guess, T correct) where T : IComparable<T>
+        => Console.WriteLine($"{msg,-40}: {guess,-20} --> Is correct ? {guess.Equals(correct)}");
     public static IEnumerable<string> ReadLines(this TextReader reader)
     {
         while (reader.ReadLine() is string line)
